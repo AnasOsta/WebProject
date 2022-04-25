@@ -3,31 +3,18 @@ let en = document.getElementById("en");
 let tr = document.getElementById("tr");
 let title = document.getElementById("title");
 const output = document.getElementById('output');
-    /*  Sayfa başladı zaman lodader mitodu çağrır     */ 
-window.addEventListener('load', () => {
-    loader();
-});
-    /*  Bekleme sayfası çıkarıyor   */
-function loader(){
-    output.innerHTML = '<div class="spinner-wrapper"><div class="spinner"></div></div>'
-}
-
-
 
 ar.onclick = ()=>{
-    loader();
     setLanguage("ar");
     localStorage.setItem("Lang", "ar");
 };
 
 en.onclick = ()=>{
-    loader();
     setLanguage("en");
     localStorage.setItem("Lang", "en");
 };
 
 tr.onclick = ()=>{
-    loader();
     setLanguage("tr");
     localStorage.setItem("Lang", "tr");
 };

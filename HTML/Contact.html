@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/HeadStyle.css">
+    <link rel="stylesheet" href="../CSS/LoadStyle.css">
+    <title>İletişim</title>
+</head>
+<body>
+    <header>
+        <button id="tr" class="button"><img src="../Image/Language/Turkey.png" width="50%"> TR</button>
+        <button id="en" class="button"><img src="../Image/Language/USA.png" width="50%">EN</button>
+        <button id="ar" class="button"><img src="../Image/Language/Syria.png" width="50%">AR</button>
+    </header>
+
+    <section>
+        <div id="output">
+            <form method="post" name="info">
+                
+                <label>Kullancı adı</label>
+                <input type="text" name="adi" value="">
+                
+                <label>E-Posta</label>
+                <input type="text" name="email" value="">
+                
+                <label>Ana başlık</label>
+                <input type="text" name="title" value="">
+                
+                <label>Konu</label>
+                <input type="text" name="content" value="">
+                
+                <input type="submit" name="submit" value="Gönder" onclick="information()">
+                <button type="reset">Temizle</button></form>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+
+    <script src="../JavaScript/Contact.js"></script>
+</html>
