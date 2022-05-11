@@ -3,8 +3,13 @@ if(empty($_POST['username']) || empty($_POST['password'])){
     header('location:index.php');
     include('index.php');
 }
+if(isset($_POST['username']) || isset($_POST['password'])){
+    $userNamae = $_POST['username'];
+    $password = $_POST['password'];
+    echo 'Hoşgeldiniz ' , $userNamae;
+}
 
-    echo 'Hoşgeldiniz “b1812100001”';
+    
 
 
 ?>
