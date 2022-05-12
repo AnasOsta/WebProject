@@ -1,0 +1,43 @@
+.slider img{
+    width: 500px;
+}
+
+.slider{
+    width: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+    
+.slider ul{
+    padding: 0;
+    width: 5000px;
+    list-style: none;
+    position: relative;
+    animation: sliding 15s ease-in-out infinite;
+}
+
+.slider ul li{
+    float: left;
+    height: 400px;
+    position: relative;
+}
+.slider ul:hover{
+    animation-play-state: paused;
+}
+
+@keyframes sliding {
+    0%, 9%{left: 0px;}
+    11%, 18%{left: -500px;}
+    19%, 29%{left: -1000px;}
+    30%, 39%{left: -1500px;}
+    40%, 49%{left: -2000px;}
+    50%, 59%{left: -2500px;}
+    60%, 69%{left: -3000px;}
+    70%, 79%{left: -3500px;}
+    80%, 89%{left: -4000px;}
+    90%, 99%{left: -4500px;}
+}
+p{
+    
+    font-size: 200%;
+}

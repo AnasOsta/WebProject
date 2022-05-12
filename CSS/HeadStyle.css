@@ -1,7 +1,66 @@
+.header .navbar{
+    background-color: #121E14;
+    border-bottom: rgb(0, 79, 16) 2px solid;
+}
+.header .navbar.navbar-dark .navbar-brand{
+    font-family: 30px;
+    font-size: 300%;
+    font-weight: 700px;
+    text-transform: uppercase;
+    color: #93F5A3;
+}
+
+.header .navbar #navbarTogglerDemo03 .nav-item .nav-link{
+    color: #93F5A3;
+    font-size: 200%;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 20px 15px 20px;
+    line-height: 26px;
+    opacity: 0.6;
+
+}
+.header .navbar #navbarTogglerDemo03 .nav-item .nav-link:hover{
+    opacity: 0.9;
+}
+.header .navbar #navbarTogglerDemo03 .nav-item .nav-link.active{
+    opacity: 1;
+}
 .button{
     text-align: right;
-    width: 6%;
+    background-color: #121E14;
+    color: #93F5A3;
+    border-radius: 5px;
+    border-color: #93F5A3;
+    width: 99px;
 }
-.button img{
-    float: left;
+
+.sidenav{
+    margin-top: 10px;
+}
+.sidenav ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+}
+
+.sidenav ul ul {
+    position: fixed;
+    display: none;
+}
+
+.sidenav ul li:hover>ul {
+    display: block;
+}
+
+.button:hover{
+    background-color: #93F5A3;
+    color: #121E14;
+}
+fieldset{
+    border: 2px solid rgba(16, 57, 40, 0.838);
+    text-align: center;
+}
+fieldset label{
+    margin-left: 50px;
 }

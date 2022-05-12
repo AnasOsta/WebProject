@@ -1,0 +1,27 @@
+
+body{
+    text-align: left;
+}
+h1{
+    text-align: center;
+    border-bottom: solid 10px black;
+}
+h2{
+    text-align: center;
+}
+.cv{
+    width: 500px;
+    margin-left: 10%;
+}
+.image{
+     position: absolute;
+    top: 110px;
+    right: 10px; 
+    width: 300px;
+    z-index: -10;
+}
+@media (max-width:918px){
+    .image{
+        display: none;
+    }
+}

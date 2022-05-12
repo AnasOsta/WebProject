@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Playfair+Display+SC&family=Reem+Kufi&family=Tapestry&display=swap');
+@import url('https://cdn.rawgit.com/ahmedmontaser12/crazynet/89a2750a/Bukra-Font.css');
+body{
+    background-color: #3F6946;
+    color: #93F5A3;
+    text-align: center;
+}
+
+.tr{
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ar{
+    font-family: 'Bukra';
+}
+h1,h2{
+    color: #121E14;
+}
+
+.fontNav{
+    font-family: 'Tapestry', cursive;
+    font-weight: 400;
+}
+a{
+    color: #7CCF8A;
+}
+a:hover{
+    color: white;
+}

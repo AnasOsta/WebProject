@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#output{
+    width: 0%;
+    height: 0px;
+}
+#login{
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(75%,-0%);
+    background-color: rgb(148, 148, 148);
+    padding: 40px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: 0.6s;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+label{
+    font-size: 25px;
+    animation: login;
+    animation-duration: 4s;
+    /* margin-top: 10px; */
+}
+#login button{
+    background-color: #93F5A3;
+    color: #121E14;
+    width: 100%;
+    transition: 0.6s;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 6px;
+    margin-top: 10px;
+    height: 35px;
+}
+
+#login button:hover{
+    cursor: pointer;
+    background-color: #121E14;
+    color: #93F5A3;
+}
+#login:hover{
+    background-color: black;
+}
+@keyframes login{
+    from{ color: yellow;}
+    to{ color: #7CCF8A; }
+}
+.konu{
+    width: 90%;
+}
+#content{
+    width: 90%;
+    height: 120px;
+}
+footer{
+    margin-top: 520px;
+}
+@media (max-width: 1062px) {
+    #login{
+        transform: translate(0%,-0%);
+    }
+}

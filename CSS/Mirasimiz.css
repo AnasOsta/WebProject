@@ -1,3 +1,6 @@
+body{
+    text-align: justify;
+}
 h3,h1{
     text-align: center;
     font-size: 150%;
@@ -5,4 +8,16 @@ h3,h1{
 }
 button{
     font-size: 110%;
+}
+p{
+    text-align: center;
+}
+#output{
+    font-size: 150%; 
+}
+#output li details p{
+    color: #121E14;
+}
+footer{
+    font-size: 25px;
 }
