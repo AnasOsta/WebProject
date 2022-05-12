@@ -1,30 +1,64 @@
-let ar = document.getElementById("ar");
-let en = document.getElementById("en");
-let tr = document.getElementById("tr");
 let title = document.getElementById("title");
 const output = document.getElementById('output');
+let footer = document.getElementById("footer");
+let ee = document.getElementById("ee");
+let header = document.getElementById("header");
 
-ar.onclick = ()=>{
+
+function ar(){
     setLanguage("ar");
     localStorage.setItem("Lang", "ar");
-};
+}
 
-en.onclick = ()=>{
+function en (){
     setLanguage("en");
     localStorage.setItem("Lang", "en");
-};
+}
 
-tr.onclick = ()=>{
-    setLanguage("tr");
-    localStorage.setItem("Lang", "tr");
-};
+function tr() {
+  
+  setLanguage("tr");
+  localStorage.setItem("Lang", "tr");
+}
 onload = ()=>{
     setLanguage(localStorage.getItem("Lang"));
 }
 function setLanguage(getLanguage){
     if(getLanguage === "ar"){
         title.innerHTML = "أثار مدينتي";
-    output.innerHTML = "<section id='output' dir='rtl'>" + 
+        header.innerHTML = `
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header" dir="rtl">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./AnaSayfa.html">الرئيسية</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./MyCountry.html">مدينتي</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./Mirasimiz.html">آثار</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Api.html">API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./CV.html">الملف.الشخصي</a>
+                  </li>
+                </ul>
+        `;
+        ee.innerHTML = `<div class="sidenav" id="ee">
+        <ul>
+            <li>
+            <button class="button"><img src="../Image/Language/Syria.png" width="50%" onclick = "ar()">AR</button>
+                <ul>
+                    <li><button class="button "><img src="../Image/Language/USA.png" width="50%" onclick = "en()">EN</button></li>
+                <li>
+                <button class="button "><img src="../Image/Language/Turkey.png" width="50%" onclick = "tr()"> TR</button>
+                </li>
+                </ul>
+            </li>
+        </ul>
+    </div>`;
+    output.innerHTML = "<section id='output' class ='ar' dir='rtl'>" + 
     "<article><h1>آثار حلب</h1><h3>المعالم الأثرية</h3><p> تحتوي حلب على العديد من الاماكن الأثرية والتاريخية وهي كالآتي :</p> <ul><li><details><summary>المداراس التاريخيّة مثل المدرسة الشاذبختية، والمدرسة الظاهريّة، والمدرسة الحلاوية، والمدرسة المقدميّة.</summary><p>المدرسة الشاذبختية إحدى المدارس التاريخية الأثرية في مدينة حلب القديمة. تم بنائها في أيام الملك الظاهر غازي عام 1193م. وتعرف باسم مسجد الشيخ معروف، تحتوي المدرسة لوحة شهيرة تحمل كتابة نسخيّة تدل على أن هذه المدرسة هي وقف قدمها 'شاذبخت عتيق' الملك العادل 'محمود بن زنكي' لأصحاب الإمام أبي حنيفة النعمان, و الشاذبختية هي مدرسة وتربة ينتهي بابها بنصف كرة ومقرنصات بديعة، وبالداخل غرفة مربعة كانت تتقدمها أقواس تهدمت في الوجه الغربي للباحة الداخلية وتعلو القبلية قبة تضم محراباً رائعاً أيوبي الطراز من المرمر وفيه عمودان ينتهيان بتيجان جميلة .</p><a href='https://cutt.us/L2Cy7'>المدرسة الظاهريّة</a><br><a href='https://cutt.us/dIINj'>المدرسة الحلاوية</a><br><a href='https://cutt.us/iVzk2'>المدرسة المقدميّة</a></details></li>"+
     "<li><details><summary>الأسواق القديمة مثل سوق المدينة، وسوق العطّارين، وسوق الياسمين، وسوق الصياغ، وسوق العتمة، وسوق الحدادين، وسوق العبارة، وسوق خان الحرير.</summary><P>سوق العطارين أحد أقدم الأسواق الواقعة داخل أسوار البلدة القديمة لمدينة القدس. يربط بين سوق باب خان الزيت و سوق الحصر، بموازاة سوق اللحامين. يتميز بسقف مقوس يعود إلى الفترة المملوكية يغطي السوق كله. وقد اشتق السوق اسمه من المحلات التجارية العديدة التي تبيع البهارات والأعشاب الطبية المصنوعة من مواد وألوان طبيعية.</p><a href='https://cutt.us/t9xX1'>بعض الصور الاضافة للأسواق</a></details></li>"+
     "<li><details><summary>القلاع مثل قلعة حلب، وقلعة سيف الدولة الحمدانيّ.</summary><p>قلعة حلب قصر محصن يعود إلى العصور الوسطى. تعتبر قلعة حلب إحدى أقدم وأكبر القلاع في العالم، يعود استخدام التل الذي تتوضع عليه القلعة إلى الألفية الثالثة قبل الميلاد، حيث احتلتها فيما بعد العديد من الحضارات بما في ذلك الإغريق والبيزنطيين والمماليك والأيوبيين، بينما يظهر أن أغلب البناء الحالي يعود إلى الفترة الأيوبية. أجرت عليها مؤسسة آغا خان للثقافة والجمعية الأثرية في حلب عمليات حفظ واسعة في عام 2000. تقع القلعة في مركز المدينة القديمة التي أدرجتها منظمة اليونسكو على لائحة مواقع التراث العالمي عام 1986.</p><a href='https://cutt.us/MT4iy'>قلعو سيف الدولة الحمداني</a></details></li>"+
@@ -43,11 +77,44 @@ function setLanguage(getLanguage){
     "<li><details><summary>ساحة السبع بحرات.</summary><p>ساحة السبع بحرات هي إحدى ساحات مدينة حلب في سوريا.</p><p>للمزيد من المعلومات اضغط <a href='https://cutt.us/EyMU5'>هنا</a></p></details></li>"+
     "<li><details><summary>محطة قطار بغداد.</summary><p>بدأ المهندسون الألمان بتشييد محطة بغداد عام 1910، وهي ثاني محطة قطار في مدينة حلب بعد محطة الشام الواقعة في حي الجميلية، أمام المبنى الحديث لمديرية المالية، قبل إزالتها في 1950. واستكملوا أعمال البناء، بتشييد جسر معدني في منطقة الصيرفي، ملاصقاً لمعمل العوارض الإسمنتية التابع للسكك الحديدية، كما شيدوا جسراً اسمنتياً في منطقة الشيخ طه، وأنشأوا على جهته الغربية مجموعة من الملاجئ الحربية.</p><p>للمزيد من المعلومات اضغط <a href='https://cutt.us/b1igs'>هنا</a></p></details></li></ul></article>"+
     "</section>";
+    footer.innerHTML = "<legend id='footer'><a href='../HTML/Contact.php'>تواصل معنا</a></legend>";
         
     }
     else if (getLanguage === "en"){
         title.innerHTML = "Our heritage";
-        output.innerHTML = "<section id='output'>" +
+        header.innerHTML = `
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./AnaSayfa.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./MyCountry.html">MyCountry</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./Mirasimiz.html">archeology</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Api.html">API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./CV.html">CV</a>
+                  </li>
+                </ul>
+        `;
+        ee.innerHTML = `<div class="sidenav" id="ee">
+        <ul>
+            <li>
+            <button class="button "><img src="../Image/Language/USA.png" width="50%" onclick = "en()">EN</button>
+                <ul>
+                    <li><button class="button"><img src="../Image/Language/Syria.png" width="50%" onclick = "ar()">AR</button></li>
+                <li>
+                <button class="button "><img src="../Image/Language/Turkey.png" width="50%" onclick = "tr()"> TR</button>
+                </li>
+                </ul>
+            </li>
+        </ul>
+    </div>`;
+        output.innerHTML = "<section id='output' class ='tr'>" +
         "<article><h1>Aleppo Antiquities</h1><h3>Monuments</h3><p>Aleppo contains many archaeological and historical sites and is as follows :</p> <ul><li><details><summary>Historical courses such as the Gay School, the Virtual School, the Halawi School, and the Introduced School</summary><p>The Shathibati School is an archaeological historical school in the ancient city of Aleppo. It was built in the days of King Dahir Ghazi in 1193. Known as Sheikh Ma 'ruf Mosque, the school contains a famous painting with copycat that indicates that this school is the stop of its presentation to the owners of Imam Abiy Hanifa al-Numan, Chathibati is a school and soil whose door ends with half a ball and exquisite pirates. Inside is a square room that was advanced by arches demolished in the western face of the indoor swimming pool. Tribalism is a dome with a magnificent Ayobi belligerent of Al Marmar with two columns ending in beautiful crowns.</p><a href='https://cutt.us/bB5Nm'>Halawi School</a><br><a href='https://cutt.us/mZeTN'>Presentation School</a></details></li>"+
         "<li><details><summary>Old markets such as Al Madina Market, Attarin Market, Jasmine Market, Drafting Market, Dark Market, Blacksmiths Market, Ferry Market and Khan Silk Market</summary><p>Al-Atarin Market is one of the oldest within the walls of Jerusalem's Old City. Linking the Bab Khan Oil Market to the Exclusive Market, parallel to the Welding Market. It features an arched ceiling dating back to the proprietary period covering the whole market. The market is derived from many shops selling spices and medicinal herbs made of natural materials and colors.</p><a href='https://cutt.us/t9xX1'>Some additional pictures of some markets</a></details></li>"+
         "<li><details><summary>Castles such as Aleppo Castle and Saif al-Dawla Al-Hamdani Castle</summary><p>Aleppo Castle is a fortified medieval palace. The citadel of Aleppo is one of the oldest and largest castles in the world, the use of the hill on which the castle is placed dates back to the third millennium BC, where it was later occupied by many civilizations including the Greeks, Byzantines, Malaysians and Ayubans, while most of the current construction appears to date back to the Ayuban era. The Aga Khan Foundation for Culture and the Aleppo Archaeological Society conducted extensive conservation operations in 2000. The castle is located in the centre of the Old City, which was listed by UNESCO on the World Heritage Sites List in 1986.</p><a href='https://cutt.us/whgI2'>Sayf al-Dawla</a></details></li>"+
@@ -68,11 +135,42 @@ function setLanguage(getLanguage){
         "<li><details><summary>Seven Seas Square</summary><p>Seven Seas Square is one of the city's squares in Aleppo, Syria.</p><p>For more information click <a href='https://cutt.us/93gDF'>Here</a></p></details></li>"+
         "<li><details><summary>Baghdad train station</summary><p>German engineers began construction of the Baghdad station in 1910, the second train station in the city of Aleppo after Al-Sham station in the Al-Jameel neighbourhood, in front of the modern building of the Malian Directorate, before its removal in 1950. They completed construction work with the construction of a metal bridge in the Al-Masurfi area, adjacent to the railroad's concrete beam plant, as well as a cement bridge in the Sheikh Taha area, and set up a series of war shelters on its western side.</p><p>For more information click <a href='https://cutt.us/b1igs'>Here</a></p></details></li></ul></article>"
         +"</section>";
+        footer.innerHTML = "<legend id='footer'><a href='../HTML/Contact.php'>Contact</a></legend>";
         
     }
     else if (getLanguage === "tr"){
         title.innerHTML = "Mirasımız";
-        output.innerHTML = "<section id='output'>" 
+        header.innerHTML = `
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="./AnaSayfa.html">AnaSayfa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./MyCountry.html">Şehrim</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./Mirasimiz.html">Mirasımız</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Api.html">API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./CV.html">CV</a>
+                  </li>
+                </ul>
+        `;
+        ee.innerHTML = `<div class="sidenav" id="ee">
+        <ul>
+            <li>
+            <button class="button "><img src="../Image/Language/Turkey.png" width="50%" onclick = "tr()"> TR</button>
+                <ul>
+                    <li><button class="button"><img src="../Image/Language/Syria.png" width="50%" onclick = "ar()">AR</button></li>
+                <li><button class="button "><img src="../Image/Language/USA.png" width="50%" onclick = "en()">EN</button></li>
+                </ul>
+            </li>
+        </ul>
+    </div>`;
+        output.innerHTML = "<section id='output' class ='tr'>" 
         + "<article><h1>Halep Eski Eserleri</h1><h3>Anıt</h3><p>Halep birçok arkeolojik ve tarihi yeri içerir ve aşağıdaki gibidir :</p> <ul><li><details><summary>Eşcinsel Okulu, Sanal Okul, Halawi Okulu ve Tanıtılan Okul gibi tarihi kurslar.</summary><p>Shathibati Okulu, antik Aleppo kentindeki bir arkeoloji tarihi okuludur. 1193 yılında Kral Dahir Ghazi'nin günlerinde inşa edilmiştir. Sheikh mA'ruf Camii olarak bilinen okulda, bu okulun İmam Abiy Hanifa el Numan sahiplerine sunumunun durdurulduğunu gösteren, ünlü bir resim yer alıyor. Chathibati, kapısı yarı top ve seçkin korsanlarla biten bir okul ve topraktır. İçeride kapalı yüzme havuzunun batı cephesinde yıkılan kemerler tarafından gelişmiş bir kare oda var. Tribalizm, güzel karideslerle biten iki kolonun bulunduğu, muhteşem bir Ayobi'nin El Marmar belligerdanına sahip bir kubbedir.</p><p>Tarih okulları hakkında daha fazla bilgi edinmek istiyorsanız aşağıdaki bağlantılara giderek Google Translator'ı kullanarak Türkçe diline çevirebilirsiniz</p><a href='https://cutt.us/iVzk2'>Sunum Okulu</a><br><a href='https://cutt.us/dIINj'>Halawi Okulu</a><br><a href='https://cutt.us/L2Cy7'>Sanal Okul</a></details></li>"+
         "<li><details><summary>Medine Pazarı, Attarin Pazarı, Yasemin Pazarı, Taslak Pazarı, Karanlık Pazar, Demirciler Pazarı, Feribot Pazarı ve Han İpek Pazarı gibi eski pazarlar</summary><p>Al-Atarin Pazarı, Kudüs'ün Eski Şehri'nin duvarlarındaki en eski pazarlardan biridir. Bab Khan Petrol pazarını, Kaynak pazarına paralel olarak Özel pazara bağlamak. Tüm pazarı kapsayan özel döneme dayanan kemerli bir tavana sahiptir. Pazar, doğal malzemeler ve renklerden yapılmış baharatlar ve tıbbi otlar satan birçok dükkandan elde ediliyor.</p><a href='https://cutt.us/t9xX1'>Bazı pazarların bazı ek resimleri</a></details></li>"+
         "<li><details><summary>Halep Kalesi ve Saif al-Dawla Al-Hamdani Kalesi gibi kaleler</summary><p>Aleppo Kalesi, surlu bir ortaçağ saradır. Haleppo Kalesi, dünyanın en eski ve en büyük kalelerinden biridir. Kalenin yerleştirildiği tepe, daha sonra Yunanlılar, Bizans, Malezya ve Ayubans gibi pek çok medeniyetin işgal ettiği M.Ö. Üçüncü milenyumuma dayanmıştır. Mevcut inşaatın çoğu Ayuban dönemine kadar devam ederken görülüyor. Aga Khan Kültür Vakfı ve Aleppo Arkeoloji Derneği 2000 yılında kapsamlı koruma operasyonları yürüttü. Kale, UNESCO tarafından 1986 yılında Dünya Mirası Sahası listesinde yer alan Eski şehrin merkezinde yer alır.</p><a href='https://cutt.us/JUfvE'>Seyfüddevle el-Hamdânî kalesi</a></details></li>"+
@@ -91,5 +189,7 @@ function setLanguage(getLanguage){
         "<li><details><summary>Yedi Deniz Meydanı</summary><p>yedi Deniz Meydanı, Suriye'nin Halep şehrindeki karelerden biridir.</p><p>Daha fazla bilgi için buraya <a href='https://cutt.us/EyMU5'>Tıklayın</a></p></details></li>"+
         "<li><details><summary>Bağdat tren istasyonu</summary><p>Alman mühendisler, 1950 yılında çıkarılmadan önce Al-Jameel Mahallesi'ndeki Al-Sham istasyonundan sonra, Aleppo kentindeki ikinci tren istasyonu olan Bağdat istasyonunun inşaatına 1910 yılında başladılar. El-Masurfi bölgesinde demiryolunun beton kiriş fabrikasının yanında bulunan bir metal köprünün inşası ile Sheikh Taha bölgesinde bir çimento köprüsü inşa çalışmalarını tamamladılar ve batı tarafına bir dizi savaş sığınağı kurdular.</p><p>Daha fazla bilgi için buraya <a href='https://cutt.us/b1igs'>Tıklayın</a></p></details></li></ul></article>"
         + "</section>";
+    footer.innerHTML = "<legend id='footer'><a href='../HTML/Contact.php'>İletişim</a></legend>";
+
     }
 }
