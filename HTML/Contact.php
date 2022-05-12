@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/HeadStyle.css">
-    <link rel="stylesheet" href="../CSS/AnaSayfa.css">
     <link rel="stylesheet" href="../CSS/FontStyle.css">
-    <title id="title">Biz Kimiz</title>
+    <link rel="stylesheet" href="../CSS/Contact.css">
+    <title id="title">İletişim</title>
 </head>
 <body>
-    
     <header class="header fontNav">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
@@ -22,7 +21,7 @@
               <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./AnaSayfa.html">AnaSayfa</a>
+                    <a class="nav-link" aria-current="page" href="./AnaSayfa.html">AnaSayfa</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./MyCountry.html">Şehrim</a>
@@ -52,55 +51,27 @@
             </div>
           </nav>
     </header>
-    
-    <section id="output">
-        <h1>Biz Kimiz??</h1>
-        <p>Suriye'de doğdum ve orada büyüdüm. Orada numal bir hayat yaşadım. Bu arada bilgisayar sevdim nasıl taamir yapcağım nasıl yeni Windows indirecem ....vb</p>
-        <p>Sonra Suriye'de savaş başladı. Türkiye'ye geldim çünkü Türkiye'ye en yakın ülkeydi ve gelişmiş bir ülke.</p>
-        <p>Benim adım Enes Usta. Ve ben Suriyeliyim,  20 yaşındayım.</p>
-        <p>Bu sayfada kendimden bahsedeceğim. İyi okumalar.</p>
-        <h2>Hobiler</h2>
-        <p>En iyi hobim satranç. Çocukken çok oynardım. Ailemle çok oynardım ve sonra video oyunlarını sevdim ve arkadaşlarım ve ailemle oynamaya başladım. Ve çocukken oynadığım en iyi oyun <a href="https://tr.wikipedia.org/wiki/Mega_Man">Mega Man</a> ve büyüdükten ve oyunlar geliştirildikten sonra <a href="https://tr.wikipedia.org/wiki/Resident_Evil">Residence Eiffel</a> oyununu beğendim. Fazla bilgi istersiniz burada <a href="https://www.webtekno.com/eski-pc-oyunlari-h96086.html?msclkid=9499547ecfc111ec8af3ae2568ca97cb">Tıkla</a></p>
-        <h2>Etkinlikler</h2>
-        <p>Günlük aktivitelerim çok çalışmak ve programlama dilleri, bunlardaki en son değişiklikler ve hatta <a href="https://harelang.org/#:~:text=For%20an%20introduction%20to%20Hare%20with%20%20considerations,management%2C%20no%20runtime%2C%20and%20uses%20the%20C%20ABI.?msclkid=8053bb5acfc311ec9c3a5ccbd7982fa1">"Hare"</a> gibi yeni diller gibi geleceğime fayda sağlayacak şeyleri aramaktır.</p>
-        <p>Ve bazen güzel doğayı çekiyorum ve sizinle bazı resimler paylaşacağım.</p>
-    </section>
-    <article>
-        <div class = "slider">
-            <ul>
-                <li>
-                    <img src="../Image/resimler/1652126033691.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033659.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033629.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033600.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033567.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033535.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033504.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033476.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033445.jpg" alt="resim">
-                </li>
-                <li>
-                    <img src="../Image/resimler/1652126033414.jpg" alt="resim">
-                </li>
-            </ul>
+
+    <section>
+        <div id="output">
+            <form method="post" name="info">
+                
+                <label for="adi">Kullancı adı</label><br>
+                <input type="text" name="adi" id="adi" class="konu" value=""><br>
+                
+                <label for="email">E-Posta</label><br>
+                <input type="text" name="email" id="email" class="konu" value=""><br>
+                
+                <label for="title1">Ana başlık</label><br>
+                <input type="text" name="title" id="title1" class="konu" value=""><br>
+                
+                <label for="content">Konu</label><br>
+                <input type="text" name="content" id="content" value=""><br>
+                
+                <button type="submit" name="submit" value="Gönder" onclick="information()">Gönder</button>
+                <button type="reset">Temizle</button></form>
         </div>
-    </article>
+    </section>
     <footer>
         <fieldset>
             <legend id="footer"><a href="../HTML/Contact.php">İletişim</a></legend>
@@ -112,5 +83,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="../JavaScript/AnasSayfa.js"></script>
+    <script src="../JavaScript/Contact.js"></script>
 </html>

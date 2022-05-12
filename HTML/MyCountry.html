@@ -4,20 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/FontStyle.css">
     <link rel="stylesheet" href="../CSS/MyCountry.css">
-    <link rel="stylesheet" href="../CSS/LoadStyle.css">
     <link rel="stylesheet" href="../CSS/HeadStyle.css">
     <title id="title">My Country</title>
 </head>
 <body>
    
     
-    <header>
-        <button id="tr" class="button"><img src="../Image/Language/Turkey.png" width="50%"> TR</button>
-        <button id="en" class="button"><img src="../Image/Language/USA.png" width="50%">EN</button>
-        <button id="ar" class="button"><img src="../Image/Language/Syria.png" width="50%">AR</button>
+    <header class="header fontNav">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="#">Kirito.g2</a>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="header">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./AnaSayfa.html">AnaSayfa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./MyCountry.html">Şehrim</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Mirasimiz.html">Mirasımız</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Api.html">API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./CV.html">CV</a>
+                  </li>
+                </ul>
+                <div class="sidenav" id="ee">
+                  <ul>
+                      <li>
+                      <button class="button "><img src="../Image/Language/Turkey.png" width="50%" onclick = "tr()"> TR</button>
+                          <ul>
+                              <li><button class="button"><img src="../Image/Language/Syria.png" width="50%" onclick = "ar()">AR</button></li>
+                          <li><button class="button "><img src="../Image/Language/USA.png" width="50%" onclick = "en()">EN</button></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              </div>
+            </div>
+          </nav>
     </header>
-    <section id="output">
+    <section id="output" class ="tr">
             
         <article>
             <h1>
@@ -99,7 +135,7 @@
         </article>
         <article>
             <div class = "slider">
-                <ul>
+                <ul><a href="https://cutt.us/3iYQh">
                     <li>
                         <img src="../Image/sehrim/AlMedrese.jpg" alt="Hallawi Okulu">
                         <h5>Hallawi Okulu</h5>
@@ -140,13 +176,21 @@
                         <img src="../Image/sehrim/Kubba.jpg" alt="Halep köftesi">
                         <h5>Halep köftesi</h5>
                     </li>
-                </ul>
+                </ul></a>
             </div>
         </article>
     </section>
-    <footer></footer>
-    
+    <footer>
+        <fieldset>
+            <legend id="footer"><a href="../HTML/Contact.php">İletişim</a></legend>
+            <label id="telefon">Telefon : <a href="tel:05516881594">05516881594</a></label>
+            <label id="email">Email : <a href="mailto:anas.osta@ogr.sakarya.edu.tr">ANAS OSTA</a></label>
+        </fieldset>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="../JavaScript/MyCountry.js"></script>
 </body>
 </html>
