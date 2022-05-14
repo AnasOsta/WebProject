@@ -8,7 +8,7 @@ h3,h1{
     
 }
 
-li, p{
+#output li, p{
     font-size: 25px;
     color: #7CCF8A;
 }
