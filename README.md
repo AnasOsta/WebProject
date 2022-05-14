@@ -1,6 +1,6 @@
 # WebProject
 ### Projenin özeti:
-##### – Kir web sitesi oluşturdum 
+##### – web sitesi oluşturdum 
 ###               Site konuları
 ##### 1– Şehrim sayfası
 ##### 2- Login sayfası
