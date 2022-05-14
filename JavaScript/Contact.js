@@ -139,7 +139,7 @@ function setLanguage(getLanguage){
         </ul>
     </div>`;
         output.innerHTML = `
-        <div id="output"  >
+        <div id="output"  class ="ar">
             <form method="post" name="info" id="login" >
 
                 <label for="adi">أسم المستخدم</label>
@@ -194,7 +194,7 @@ function setLanguage(getLanguage){
     </div>`;
         
         output.innerHTML = `
-        <div id="output">
+        <div id="output" class ="tr">
         <form method="post" name="info" id="login">
             
             <label for="adi">Kullancı adı</label><br>
@@ -249,7 +249,7 @@ function setLanguage(getLanguage){
         </ul>
     </div>`;
         output.innerHTML =`
-        <div id="output">
+        <div id="output" class ="tr">
             <form method="post" name="info" id="login">
                 
                 <label for="adi">User name</label><br>
